@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="stylesheet" href="pedidos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos de Oração</title>
+</head>
+
+
+
+
+
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a> </div>
+  <ul class="nav-links">
+    <li><a href="#cultos">Cultos</a></li>
+    <li><a href="#ministerios">Ministérios</a></li>
+    <li><a href="#local">Contato</a></li>
+    <li><a href="peddidos.html">ORAÇÃO</a></li>
+  </ul>
+  <button class="nav-cta">Primeira Visita</button>
+
+  <!-- Botão hamburguer -->
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose">✕</button>
+  <ul>
+    <li><a href="#cultos" onclick="fecharMenu()">Cultos</a></li>
+    <li><a href="#ministerios" onclick="fecharMenu()">Ministérios</a></li>
+    <li><a href="#local" onclick="fecharMenu()">Contato</a></li>
+    <li><a href="#" onclick="fecharMenu()">Oração</a></li>
+    <li><a href="#" class="mobile-cta" onclick="fecharMenu()">Primeira Visita</a></li>
+  </ul>
+</div>
+<div class="menu-overlay" id="menuOverlay" onclick="fecharMenu()"></div>
+
+
+
+
+  <div class="page">
+
+    <div class="hero">
+      <div class="hero-icon">🙏</div>
+      <h1>Pedidos de Oração</h1>
+      <p>Compartilhe seu pedido conosco. Nossa equipe intercederá por você com amor e fé.</p>
+    </div>
+
+    <div class="info-cards">
+      <div class="info-card">
+        <span class="ic-icon">🔒</span>
+        <p>Seus pedidos são tratados com total sigilo e respeito</p>
+      </div>
+      <div class="info-card">
+        <span class="ic-icon">🕐</span>
+        <p>Oramos pelos pedidos toda semana nos cultos</p>
+      </div>
+      <div class="info-card">
+        <span class="ic-icon">🤝</span>
+        <p>Toda a equipe pastoral intercede por você</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div id="form-area">
+
+        <span class="section-label">Tipo de pedido</span>
+        <div class="tipo-grid">
+          <div class="tipo-card ativo" onclick="selecionaTipo(this)">
+            <span class="tipo-icon">❤️</span>
+            <span>Oração</span>
+          </div>
+          <div class="tipo-card" onclick="selecionaTipo(this)">
+            <span class="tipo-icon">🏥</span>
+            <span>Cura</span>
+          </div>
+          <div class="tipo-card" onclick="selecionaTipo(this)">
+            <span class="tipo-icon">🏠</span>
+            <span>Família</span>
+          </div>
+          <div class="tipo-card" onclick="selecionaTipo(this)">
+            <span class="tipo-icon">⭐</span>
+            <span>Louvor</span>
+          </div>
+          <div class="tipo-card" onclick="selecionaTipo(this)">
+            <span class="tipo-icon">💰</span>
+            <span>Finanças</span>
+          </div>
+          <div class="tipo-card" onclick="selecionaTipo(this)">
+            <span class="tipo-icon">✏️</span>
+            <span>Outro</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="section-label" for="pedido">Seu pedido *</label>
+          <textarea id="pedido" placeholder="Escreva aqui o que está no seu coração..."></textarea>
+        </div>
+
+        <label class="anon-row">
+          <input type="checkbox" id="anonimo" onchange="toggleAnon(this)">
+          Enviar anonimamente
+        </label>
+
+        <div id="dados-pessoais">
+          <div class="row2">
+            <div class="field">
+              <label class="section-label" for="nome">Nome</label>
+              <input type="text" id="nome" placeholder="Seu nome">
+            </div>
+            <div class="field">
+              <label class="section-label" for="email">Email (para retorno)</label>
+              <input type="email" id="email" placeholder="seu@email.com">
+            </div>
+          </div>
+          <div class="field">
+            <label class="section-label" for="telefone">WhatsApp (opcional)</label>
+            <input type="tel" id="telefone" placeholder="(51) 99999-9999">
+          </div>
+        </div>
+
+        <button class="btn-enviar" onclick="enviar()">
+          ✉️ Enviar pedido
+        </button>
+
+      </div>
+
+      <div class="sucesso" id="sucesso">
+        <div class="s-icon">✅</div>
+        <h2>Pedido recebido!</h2>
+        <p>Estamos orando por você.<br>Que Deus abençoe sua vida abundantemente!</p>
+      </div>
+    </div>
+
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("2i3lxM1klfQMJsQKr");
+
+function selecionaTipo(el) {
+  document.querySelectorAll('.tipo-card').forEach(card => {
+    card.classList.remove('ativo');
+  });
+  el.classList.add('ativo');
+}
+
+function toggleAnon(cb) {
+  document.getElementById('dados-pessoais').style.display =
+    cb.checked ? 'none' : 'block';
+}
+
+function enviar() {
+  const pedido = document.getElementById('pedido').value.trim();
+
+  if (!pedido) {
+    alert('Por favor, escreva seu pedido antes de enviar.');
+    return;
+  }
+
+  const tipo = document.querySelector('.tipo-card.ativo span:last-child').textContent;
+  const anonimo = document.getElementById('anonimo').checked;
+
+  const dados = {
+    tipo: tipo,
+    pedido: pedido,
+    nome: anonimo ? "Anônimo" : document.getElementById('nome').value || "Não informado",
+    email: anonimo ? "Anônimo" : document.getElementById('email').value || "Não informado",
+    telefone: anonimo ? "Anônimo" : document.getElementById('telefone').value || "Não informado"
+  };
+
+  const botao = document.querySelector('.btn-enviar');
+  botao.disabled = true;
+  botao.innerHTML = '⏳ Enviando...';
+
+emailjs.send(
+  "service_py82euw",
+  "template_7gg4c0o",
+  dados
+)
+  .then(function() {
+    document.getElementById('form-area').style.display = 'none';
+    document.getElementById('sucesso').style.display = 'block';
+  })
+  .catch(function(error) {
+    console.error('Erro EmailJS:', error);
+    alert('Erro ao enviar o pedido. Verifique o console (F12).');
+
+    botao.disabled = false;
+    botao.innerHTML = '✉️ Enviar pedido';
+  });
+}
+</script>
+
+
+</body>
+</html>

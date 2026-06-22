@@ -1,0 +1,370 @@
+ *{margin:0;padding:0;box-sizing:border-box
+}
+  
+:root{
+    --navy:#1B2B5E;
+    --gold:#C9A84C;
+    --ourovivo:#eeb416;
+    --gold-light:#E8C870;
+    --pearl:#F8F6F0;
+    --warm-gray:#6B7280;
+    --deep-blue:#0D1A3E;
+    --cream:#FAF8F3;
+    --red: #cf0000 ;
+  }
+
+  body{font-family:'Inter',sans-serif;background:#fff;color:#1a1a1a;overflow-x:hidden}
+
+  html {
+  overflow-x: hidden;
+}
+
+    .page {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem 1.5rem;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #EEEDFE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 26px;
+    }
+
+    .hero h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* INFO CARDS */
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      padding: 14px 10px;
+      text-align: center;
+    }
+
+    .info-card .ic-icon {
+      font-size: 22px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .info-card p {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* CARD PRINCIPAL */
+    .card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    /* TIPO */
+    .section-label {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .tipo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .tipo-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.15s;
+      background: #fff;
+    }
+
+    .tipo-card:hover {
+      border-color: #c00000;
+      background: #EEEDFE;
+    }
+
+    .tipo-card.ativo {
+      border-color: #ff0000;
+      background: #EEEDFE;
+    }
+
+    .tipo-card .tipo-icon {
+      font-size: 20px;
+      display: block;
+      margin-bottom: 5px;
+      color: #888;
+    }
+
+    .tipo-card.ativo .tipo-icon { color: #ff0000; }
+
+    .tipo-card span {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .tipo-card.ativo span {
+      color: #ff0000;
+      font-weight: 600;
+    }
+
+    /* CAMPOS */
+    .field { margin-bottom: 1.1rem; }
+
+    label.section-label { margin-bottom: 6px; }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #1a1a1a;
+      background: #fafafa;
+      outline: none;
+      transition: border-color 0.15s;
+      font-family: sans-serif;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #ff0000;
+      background: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .row2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    /* ANONIMO */
+    .anon-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 1.1rem;
+      font-size: 14px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .anon-row input { cursor: pointer; width: auto; }
+
+    /* BOTÃO */
+    .btn-enviar {
+      width: 100%;
+      padding: 13px;
+      background: #ff0000;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-enviar:hover { opacity: 0.88; }
+    .btn-enviar:active { transform: scale(0.98); }
+
+    /* SUCESSO */
+    .sucesso {
+      display: none;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+
+    .sucesso .s-icon { font-size: 52px; }
+    .sucesso h2 { font-size: 20px; font-weight: 600; margin: 1rem 0 0.5rem; }
+    .sucesso p { font-size: 15px; color: #555; line-height: 1.6; }
+
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(255, 255, 255, 0.822);backdrop-filter:blur(8px)}
+  .nav-logo{font-family:'Playfair Display',serif;color:var(--ourovivo);font-size:1.1rem;letter-spacing:0.08em;text-transform:uppercase;}
+  .nav-links{display:flex;gap:2rem;list-style:none}
+  .nav-links a{color: black;text-decoration:none;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s}
+  .nav-links a:hover{color:var(--red)}    
+  .nav-cta{background:var(--red);color:var(--cream);border:none;padding:0.55rem 1.4rem;font-size:0.8rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif}
+  .nav-cta:hover{background-color: var(--cream); color: var(--red); border: 1px solid #cf0000; }
+  .nav-logo img{ width: 250px; height: auto;}
+
+  /* ── Hamburguer ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 200;
+  }
+  .hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--red);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /* ── Menu mobile lateral ── */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: #fff;
+    z-index: 300;
+    padding: 2rem 1.5rem;
+    transition: right 0.35s ease;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+  }
+  .mobile-menu.aberto {
+    right: 0;
+  }
+  .mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--red);
+    display: block;
+    margin-left: auto;
+    margin-bottom: 2rem;
+  }
+  .mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .mobile-menu ul li a {
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0ede6;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .mobile-menu ul li a:hover {
+    color: var(--red);
+  }
+  .mobile-menu ul li a.mobile-cta {
+    margin-top: 1.5rem;
+    background: var(--red);
+    color: #fff;
+    text-align: center;
+    padding: 0.9rem;
+    border-bottom: none;
+    border-radius: 2px;
+  }
+
+  /* ── Overlay escurecido ── */
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 200;
+  }
+  .menu-overlay.ativo {
+    display: block;
+  }
+
+
+
+    /* MOBILE */
+    @media (max-width: 480px) {
+      .page { padding: 1rem 0.75rem 2.5rem; }
+
+      .hero { padding: 1.5rem 0.5rem 1.2rem; }
+      .hero h1 { font-size: 20px; }
+      .hero p { font-size: 14px; }
+
+      .info-cards { grid-template-columns: 1fr; gap: 8px; }
+      .info-card { display: flex; align-items: center; gap: 12px; text-align: left; padding: 12px; }
+      .info-card .ic-icon { font-size: 20px; flex-shrink: 0; }
+      .info-card p { font-size: 13px; }
+
+      .tipo-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .tipo-card { padding: 10px 6px; }
+      .tipo-card .tipo-icon { font-size: 18px; }
+      .tipo-card span { font-size: 11px; }
+
+      .row2 { grid-template-columns: 1fr; gap: 0; }
+
+      .card { padding: 1.1rem; border-radius: 12px; }
+
+      input[type=text],
+      input[type=email],
+      input[type=tel],
+      textarea { font-size: 16px; }
+
+      .btn-enviar { font-size: 15px; padding: 13px; }
+    
+       nav{ padding:1rem 1.5rem }
+
+    /* esconde links e botão desktop, mostra hamburguer */
+    .nav-links { display: none }
+    .nav-cta   { display: none }
+    .hamburger { display: flex }
+    }

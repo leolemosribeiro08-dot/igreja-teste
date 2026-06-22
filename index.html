@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Igreja Primitiva dom do Amor</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a> </div>
+  <ul class="nav-links">
+    <li><a href="#cultos">Cultos</a></li>
+    <li><a href="#ministerios">Ministérios</a></li>
+    <li><a href="#local">Contato</a></li>
+    <li><a href="pedidos.html">ORAÇÃO</a></li>
+  </ul>
+  <button class="nav-cta">Primeira Visita</button>
+
+  <!-- Botão hamburguer -->
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose">✕</button>
+  <ul>
+    <li><a href="#cultos" onclick="fecharMenu()">Cultos</a></li>
+    <li><a href="#ministerios" onclick="fecharMenu()">Ministérios</a></li>
+    <li><a href="#local" onclick="fecharMenu()">Contato</a></li>
+    <li><a href="#" onclick="fecharMenu()">Oração</a></li>
+    <li><a href="#" class="mobile-cta" onclick="fecharMenu()">Primeira Visita</a></li>
+  </ul>
+</div>
+<div class="menu-overlay" id="menuOverlay" onclick="fecharMenu()"></div>
+
+
+
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Bem-vindo à</div>
+    <h1 class="hero-title">Igreja Primitiva</h1>
+    <h1 class="hero-title"><em> DOM DO AMOR</em></h1>
+    <p class="hero-sub">Um lugar de fé, esperança e comunidade. Venha como você é e encontre o amor que transforma.</p>
+    <div class="hero-btns">
+      <button class="btn-primary">Planejar minha Visita</button>
+     </div>
+  </div>
+</section>
+
+<section class="banner-fotos">
+
+    <div class="banner-item">
+        <img src="img/bannercultos.jpeg" onclick="abrirImagem(this.src)">
+    </div>
+
+    <div class="banner-item">
+        <img src="img/bannerlogo.jpeg" onclick="abrirImagem(this.src)">
+    </div>
+
+    <div class="banner-item">
+        <img src="img/bannerdoacao.jpeg" onclick="abrirImagem(this.src)">
+    </div>
+
+</section>
+
+<section class="galeria">
+  <div class="section-header">
+    <span class="eyebrow-sm">Nossa Igreja</span>
+    <h2 class="section-title">Momentos Especiais</h2>
+  </div>
+
+  <div class="galeria-grid">
+    <img src="img/img1.jpeg" alt="">
+    <img src="img/img2.jpeg" alt="">
+    <img src="img/img3.jpeg" alt="">
+    <img src="img/img4.jpeg" alt="">
+    <img src="img/img5.jpeg" alt="">
+    <img src="img/img6.jpeg" alt="">
+   
+  </div>
+</section>
+
+<section class="section-cultos" id="cultos">
+  <div class="section-header">
+    <span class="eyebrow-sm">Venha nos encontrar</span>
+    <h2 class="section-title">Horários de Culto</h2>
+  </div>
+  <div class="cultos-grid">
+    <div class="culto-card">
+      <div class="culto-dia">Terça-feira</div>
+      <div class="culto-nome">Culto de Ensino</div>
+      <div class="culto-hora"> 19h às 21:30h</div>
+      <div class="culto-desc">Adoração contemporânea, Palavra e comunhão para toda a família.</div>
+    </div>
+    <div class="culto-card">
+      <div class="culto-dia">Quarta-feira</div>
+      <div class="culto-nome">Culto de Milagres</div>
+      <div class="culto-hora"> 19h às 21:30h</div>
+      <div class="culto-desc">Culto voltado para oração, renovação da fé e testemunhos das bênçãos e milagres de Deus.</div>
+    </div>
+    <div class="culto-card">
+      <div class="culto-dia">Sexta-feira</div>
+      <div class="culto-nome">Culto da Libertação</div>
+      <div class="culto-hora"> 19h às 21:30h</div>
+      <div class="culto-desc">Momento dedicado à oração, restauração espiritual e busca pela liberdade em Cristo.</div>
+    </div>
+    <div class="culto-card">
+      <div class="culto-dia">Domingo</div>
+      <div class="culto-nome">Departamento Feminino</div>
+      <div class="culto-hora"> 19h às 21:30h</div>
+      <div class="culto-desc">mulheres que pregam, mas o público é para todos.</div>
+    </div>
+  </div>
+</section>
+
+<div class="mensagem-wrapper" id="mensagem">
+  <div class="mensagem-inner">
+    <div class="mensagem-quote">
+      <blockquote>Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.</blockquote>
+      <div class="mensagem-autor">
+        <div class="mensagem-autor-line"></div>
+        <span class="mensagem-autor-name">Versículo da semana</span>
+      </div>
+    </div>
+    <div class="mensagem-ref">
+      <span class="ref-label">Para meditar</span>
+      <div class="ref-text">João<br>3:16</div>
+      <div class="ref-livro">Novo Testamento · Evangelho de João</div>
+    </div>
+  </div>
+</div>
+
+<section class="section-ministerios" id="ministerios">
+  <div class="section-header">
+    <span class="eyebrow-sm">Encontre seu lugar</span>
+    <h2 class="section-title">Nossos Ministérios</h2>
+  </div>
+  <div class="ministerios-grid">
+    <div class="ministerio-item">
+      <span class="ministerio-icon">✝</span>
+      <div class="ministerio-nome">Louvor</div>
+      <div class="ministerio-desc">Responsável por conduzir os cânticos e a adoração nos cultos.</div>
+    </div>
+    <div class="ministerio-item">
+      <span class="ministerio-icon">🌱</span>
+      <div class="ministerio-nome">Infantil</div>
+      <div class="ministerio-desc">Ensino bíblico e cuidado voltado para os menores.</div>
+    </div>
+
+     <div class="ministerio-item">
+      <span class="ministerio-icon">🤝</span>
+      <div class="ministerio-nome"> Ação Social e Diaconia</div>
+      <div class="ministerio-desc">Focado em arrecadar doações, visitar enfermos e ajudar famílias carentes..</div>
+    </div>
+
+       <div class="ministerio-item">
+      <span class="ministerio-icon">📖</span>
+      <div class="ministerio-nome">Escola Bíblica</div>
+      <div class="ministerio-desc">  Organização de classes, estudos e discipulado.</div>
+    </div>
+
+    <div class="ministerio-item">
+      <span class="ministerio-icon">⚡</span>
+      <div class="ministerio-nome"> Oração</div>
+      <div class="ministerio-desc">Intercessão pelas necessidades da igreja e da comunidade.</div>
+    </div>
+   
+    <div class="ministerio-item">
+      <span class="ministerio-icon">🕊</span>
+      <div class="ministerio-nome">Recepção e Hospitalidade</div>
+      <div class="ministerio-desc"> Acolhimento e integração de membros e visitantes.</div>
+    </div>
+
+    <div class="ministerio-item">
+      <span class="ministerio-icon">⚡</span>
+      <div class="ministerio-nome"> Ministério de Cura e Libertação</div>
+      <div class="ministerio-desc">é um serviço de intercessão e acolhimento que visa promover a cura física, a cura interior (feridas da alma) e a libertação espiritual. Ele atua no aconselhamento, escuta de partilhas e oração pelos necessitados, fundamentando-se na fé e na Palavra de Jesus Cristo..</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-local" id="local">
+  <div class="local-inner">
+    <span class="eyebrow-sm">Como chegar</span>
+    <h2 class="section-title">Venha nos Visitar</h2>
+    <address class="local-endereco">
+      <strong>Igreja Primitiva Dom do Amor</strong>
+      Rua Wolfram Metzler número 95, bairro Rubem Berta- Porto Alegre RS. <br>
+    
+    </address>
+    <div class="local-grid">
+      <div class="local-info">
+        <div class="local-info-label">Telefone</div>
+        <div class="local-info-val">Em breve</div>
+      </div>
+      
+      <div class="local-info">
+        <div class="local-info-label">E-mail</div>
+        <div class="local-info-val"><a href="mailto:igrejaprimitivadomdoamor@gmail.com"><img src="img/gmail.png" alt="">igrejaprimitivadomdoamor@gmail.com </a>
+</div>
+      </div>
+
+    
+      <div class="local-info">
+        <div class="local-info-label">Instagram</div>
+        <div class="local-info-val"><a href="https://www.instagram.com/igrejaprimitivadomdoamor?igsh=b3E4bzhiMXMzNTd2"><img src="img/insta.png" alt="">@Igreja Primitiva Dom do Amor</a></div>
+      </div>
+
+      <div class="local-info">
+        <div class="local-info-label">Facebook</div>
+        <div class="local-info-val"><a href="https://www.facebook.com/share/1DTZdJLDVS/"><img src="img/face.png" alt="">Igreja Primitiva Dom do Amor</a></div>
+      </div>
+
+    
+      
+    </div>
+
+    
+    <button class="btn-primary" style="margin-top:1rem" onclick="window.open('https://maps.google.com/?q=Guaíba,RS','_blank')">Abrir no Maps</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Igreja Primitiva Dom do Amor</div>
+  <p class="footer-verse">"Eu sou o caminho, a verdade e a vida." — João 14:6</p>
+  <div class="social-row">
+    <a class="social-btn" href="https://www.instagram.com/igrejaprimitivadomdoamor?igsh=b3E4bzhiMXMzNTd2">f</a>
+    <a class="social-btn" href="https://www.facebook.com/share/1DTZdJLDVS/">in</a>
+    <a class="social-btn" href="mailto:igrejaprimitivadomdoamor@gmail.com">✉</a>
+  </div>
+  <div class="footer-links">
+    <a href="#">Quem Somos</a>
+    <a href="#">O Que Cremos</a>
+    <a href="#">Doações</a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-copy">© 2026 Igreja da Graça · Todos os direitos reservados</div>
+</footer>
+
+<div id="lightbox" class="lightbox" onclick="fecharImagem()">
+    <img id="lightbox-img" src="">
+</div>
+
+<script>
+function abrirImagem(src){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function fecharImagem(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+// Menu hamburguer
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuOverlay = document.getElementById('menuOverlay');
+const menuClose = document.getElementById('menuClose');
+
+hamburger.addEventListener('click', () => {
+    mobileMenu.classList.add('aberto');
+    menuOverlay.classList.add('ativo');
+    document.body.style.overflow = 'hidden';
+});
+
+menuClose.addEventListener('click', fecharMenu);
+
+function fecharMenu() {
+    mobileMenu.classList.remove('aberto');
+    menuOverlay.classList.remove('ativo');
+    document.body.style.overflow = '';
+}
+</script>
+</body>
+</html>
